@@ -25,15 +25,16 @@ namespace OdeToFood
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddDbContextpool<OdeToFoodDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("OdeToFoodDb"));
-            });
-            
+            //services.AddScopped()
+            //services.AddDbContextpool<OdeToFoodDbContext>(options =>
+            //{
+            //    options.UseSqlServer(Configuration.GetConnectionString("OdeToFoodDb"));
+            //});         
         
 
-            services.AddScoped<IRestaurantData, SqlRestaurantData>();
+            //services.AddScoped<IRestaurantData, SqlRestaurantData>();
+
+          
 
             services.Configure<CookiePolicyOptions>(options =>
             {
